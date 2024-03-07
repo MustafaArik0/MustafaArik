@@ -18,7 +18,7 @@ class SendSms():
     #Instagram
     def Instagram(self):    
         try:    
-            url = "https://www.instagram.com:443/"
+            url = "https://www.instagram.com:443/login/"
             headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:121.0) Gecko/20100101 Firefox/121.0", "Accept": "application/json, text/plain, */*", "Accept-Language": "en-US,en;q=0.5", "Accept-Encoding": "gzip, deflate, br", "Page-Url": "/kayit-ol", "Content-Type": "application/json;charset=utf-8", "Positive-Client": "instagram", "Positive-Client-Type": "web", "Store-Id": "1", "Origin": "https://www.instagram.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.instagram.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Te": "trailers", "Connection": "close"}
             json={"mobile_number": self.phone, "token_type": "register_token"}
             r = requests.post(url, headers=headers, json=json, timeout=6)
